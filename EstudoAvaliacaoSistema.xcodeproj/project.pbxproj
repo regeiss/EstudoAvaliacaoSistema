@@ -9,23 +9,35 @@
 /* Begin PBXBuildFile section */
 		E15AAA1424213D2600B7F4FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA1324213D2600B7F4FE /* AppDelegate.swift */; };
 		E15AAA1624213D2600B7F4FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA1524213D2600B7F4FE /* SceneDelegate.swift */; };
-		E15AAA1824213D2600B7F4FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA1724213D2600B7F4FE /* ViewController.swift */; };
+		E15AAA1824213D2600B7F4FE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA1724213D2600B7F4FE /* LoginVC.swift */; };
 		E15AAA1B24213D2600B7F4FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15AAA1924213D2600B7F4FE /* Main.storyboard */; };
 		E15AAA1E24213D2600B7F4FE /* EstudoAvaliacaoSistema.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA1C24213D2600B7F4FE /* EstudoAvaliacaoSistema.xcdatamodeld */; };
 		E15AAA2024213D2900B7F4FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15AAA1F24213D2900B7F4FE /* Assets.xcassets */; };
 		E15AAA2324213D2900B7F4FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15AAA2124213D2900B7F4FE /* LaunchScreen.storyboard */; };
+		E15AAA31242162F600B7F4FE /* Usuario+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA2F242162F600B7F4FE /* Usuario+CoreDataClass.swift */; };
+		E15AAA32242162F600B7F4FE /* Usuario+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA30242162F600B7F4FE /* Usuario+CoreDataProperties.swift */; };
+		E15AAA34242165FE00B7F4FE /* Persistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA33242165FE00B7F4FE /* Persistencia.swift */; };
+		E15AAA3624226C8000B7F4FE /* Rede.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA3524226C8000B7F4FE /* Rede.swift */; };
+		E15AAA392422947000B7F4FE /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA382422947000B7F4FE /* Login.swift */; };
+		E15AAA3B2422978A00B7F4FE /* Utilitarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA3A2422978A00B7F4FE /* Utilitarios.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E15AAA1024213D2600B7F4FE /* EstudoAvaliacaoSistema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstudoAvaliacaoSistema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15AAA1324213D2600B7F4FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E15AAA1524213D2600B7F4FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E15AAA1724213D2600B7F4FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E15AAA1724213D2600B7F4FE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E15AAA1A24213D2600B7F4FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E15AAA1D24213D2600B7F4FE /* EstudoAvaliacaoSistema.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EstudoAvaliacaoSistema.xcdatamodel; sourceTree = "<group>"; };
 		E15AAA1F24213D2900B7F4FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E15AAA2224213D2900B7F4FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E15AAA2424213D2900B7F4FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E15AAA2F242162F600B7F4FE /* Usuario+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Usuario+CoreDataClass.swift"; path = "EstudoAvaliacaoSistema/Modelo/Usuario+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E15AAA30242162F600B7F4FE /* Usuario+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Usuario+CoreDataProperties.swift"; path = "EstudoAvaliacaoSistema/Modelo/Usuario+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E15AAA33242165FE00B7F4FE /* Persistencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistencia.swift; sourceTree = "<group>"; };
+		E15AAA3524226C8000B7F4FE /* Rede.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rede.swift; sourceTree = "<group>"; };
+		E15AAA382422947000B7F4FE /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		E15AAA3A2422978A00B7F4FE /* Utilitarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilitarios.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +54,8 @@
 		E15AAA0724213D2600B7F4FE = {
 			isa = PBXGroup;
 			children = (
+				E15AAA2F242162F600B7F4FE /* Usuario+CoreDataClass.swift */,
+				E15AAA30242162F600B7F4FE /* Usuario+CoreDataProperties.swift */,
 				E15AAA1224213D2600B7F4FE /* EstudoAvaliacaoSistema */,
 				E15AAA1124213D2600B7F4FE /* Products */,
 			);
@@ -58,9 +72,14 @@
 		E15AAA1224213D2600B7F4FE /* EstudoAvaliacaoSistema */ = {
 			isa = PBXGroup;
 			children = (
+				E15AAA372422945400B7F4FE /* Auxiliar */,
+				E15AAA2E2421610500B7F4FE /* Servicos */,
+				E15AAA2D2421454B00B7F4FE /* Rede */,
+				E15AAA2C2421454400B7F4FE /* Controller */,
+				E15AAA2B2421454000B7F4FE /* View */,
+				E15AAA2A2421453A00B7F4FE /* Modelo */,
 				E15AAA1324213D2600B7F4FE /* AppDelegate.swift */,
 				E15AAA1524213D2600B7F4FE /* SceneDelegate.swift */,
-				E15AAA1724213D2600B7F4FE /* ViewController.swift */,
 				E15AAA1924213D2600B7F4FE /* Main.storyboard */,
 				E15AAA1F24213D2900B7F4FE /* Assets.xcassets */,
 				E15AAA2124213D2900B7F4FE /* LaunchScreen.storyboard */,
@@ -68,6 +87,53 @@
 				E15AAA1C24213D2600B7F4FE /* EstudoAvaliacaoSistema.xcdatamodeld */,
 			);
 			path = EstudoAvaliacaoSistema;
+			sourceTree = "<group>";
+		};
+		E15AAA2A2421453A00B7F4FE /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modelo;
+			sourceTree = "<group>";
+		};
+		E15AAA2B2421454000B7F4FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E15AAA2C2421454400B7F4FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E15AAA1724213D2600B7F4FE /* LoginVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E15AAA2D2421454B00B7F4FE /* Rede */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Rede;
+			sourceTree = "<group>";
+		};
+		E15AAA2E2421610500B7F4FE /* Servicos */ = {
+			isa = PBXGroup;
+			children = (
+				E15AAA33242165FE00B7F4FE /* Persistencia.swift */,
+				E15AAA3524226C8000B7F4FE /* Rede.swift */,
+			);
+			path = Servicos;
+			sourceTree = "<group>";
+		};
+		E15AAA372422945400B7F4FE /* Auxiliar */ = {
+			isa = PBXGroup;
+			children = (
+				E15AAA382422947000B7F4FE /* Login.swift */,
+				E15AAA3A2422978A00B7F4FE /* Utilitarios.swift */,
+			);
+			path = Auxiliar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +207,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E15AAA1824213D2600B7F4FE /* ViewController.swift in Sources */,
+				E15AAA1824213D2600B7F4FE /* LoginVC.swift in Sources */,
+				E15AAA31242162F600B7F4FE /* Usuario+CoreDataClass.swift in Sources */,
+				E15AAA32242162F600B7F4FE /* Usuario+CoreDataProperties.swift in Sources */,
+				E15AAA3B2422978A00B7F4FE /* Utilitarios.swift in Sources */,
 				E15AAA1424213D2600B7F4FE /* AppDelegate.swift in Sources */,
 				E15AAA1E24213D2600B7F4FE /* EstudoAvaliacaoSistema.xcdatamodeld in Sources */,
+				E15AAA3624226C8000B7F4FE /* Rede.swift in Sources */,
+				E15AAA392422947000B7F4FE /* Login.swift in Sources */,
+				E15AAA34242165FE00B7F4FE /* Persistencia.swift in Sources */,
 				E15AAA1624213D2600B7F4FE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
