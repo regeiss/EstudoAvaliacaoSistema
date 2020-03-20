@@ -39,7 +39,6 @@ class Login
     {
         // Grava hora de login
         dataLogin = utilitarios.dataLoginFormatada
-        
     }
     
     func atualizaStatusLogin(status: Bool)

@@ -16,8 +16,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, NetworkCheckObserver
     // MARK: - Campos da tela outlets
     @IBOutlet weak var txtStatusLabel: UILabel!
     @IBOutlet weak var txtUsuario: UITextField!
-    @IBAction func txtUsuario(_ sender: UITextField) {
-    }
+    @IBAction func txtUsuario(_ sender: UITextField) {}
     @IBOutlet weak var txtSenha: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
     
@@ -25,7 +24,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, NetworkCheckObserver
     var networkCheck = NetworkCheck.sharedInstance()
     var container: NSPersistentContainer!
     var usuario = [Usuario]()
-//    let transiton = SlideInTransition()
+    let transiton = SlideInTransition()
     var topView: UIView?
     var disparaSegue: Bool = false
 
@@ -36,11 +35,33 @@ class LoginVC: UIViewController, UITextFieldDelegate, NetworkCheckObserver
         InicializaViewLogin()
     }
 
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        txtStatusLabel.text = networkCheck.currentStatus == .satisfied ? "Connected" : "Disconnected"
+        networkCheck.addObserver(observer: self)
+    }
+    
     override func viewWillDisappear(_ animated: Bool)
     {
         super.viewWillDisappear(animated)
         networkCheck.removeObserver(observer: self)
     }
+    
+    
+    // MARK: Acoes dos objetos da view
+    @IBAction func AcionaMenu(_ sender: UIBarButtonItem)
+    {
+        guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "MenuTableViewController") as? SideMenuVC
+        else
+        { return }
+        
+        menuViewController.didTapMenuType = { menuType in self.transitionToNew(menuType)}
+        menuViewController.modalPresentationStyle = .overCurrentContext
+        menuViewController.transitioningDelegate = self
+        present(menuViewController, animated: true)
+    }
+    
     
     func textFieldDidEndEditing(_ textField: UITextField)
     {
@@ -113,8 +134,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, NetworkCheckObserver
     func displayErrorMessage(title: String, message:String)
     {
         let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let OKAction = UIAlertAction(title: "OK", style: .default) {(action:UIAlertAction) in
-        }
+        let OKAction = UIAlertAction(title: "OK", style: .default) {(action:UIAlertAction) in }
         alertView.addAction(OKAction)
         self.present(alertView, animated: true, completion: nil)
     }
@@ -148,6 +168,34 @@ class LoginVC: UIViewController, UITextFieldDelegate, NetworkCheckObserver
             displayErrorMessage(title: "Aviso", message: "Usuário ou senha inválido")
         }
         return retorno
+    }
+    
+    // MARK: - SideMenu
+    func transitionToNew(_ menuType: MenuType)
+    {
+        let title = String(describing: menuType).capitalized
+        self.title = title
+
+        topView?.removeFromSuperview()
+        switch menuType
+        {
+            case .perfil:
+                guard let viewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PerfilVC") as? PerfilVC
+                    else {return}
+                    navigationController?.pushViewController(viewVC, animated: true)
+            
+            case .logout:
+                let login = Login()
+                login.atualizaStatusLogin(status: false)
+                
+            case .ajuda:
+                guard let viewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AjudaVC") as? AjudaVC
+                    else {return}
+                    navigationController?.pushViewController(viewVC, animated: true)
+
+            default:
+                break
+        }
     }
 
 //===============================================================================================================================================
@@ -193,3 +241,18 @@ class LoginVC: UIViewController, UITextFieldDelegate, NetworkCheckObserver
      }
 }
 
+// MARK: - Extensoes
+extension LoginVC: UIViewControllerTransitioningDelegate
+{
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning?
+    {
+        transiton.isPresenting = true
+        return transiton
+    }
+
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
+    {
+        transiton.isPresenting = false
+        return transiton
+    }
+}
