@@ -12,8 +12,9 @@ enum MenuType: Int
 {
     case home
     case perfil
-    case logout
+    case cadastro
     case ajuda
+    case logout
 }
 
 class SideMenuVC: UITableViewController
@@ -25,20 +26,32 @@ class SideMenuVC: UITableViewController
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int
     {
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 4
+        switch section
+        {
+            case 0: return 3
+            case 1: return 2
+            default: return 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        guard let menuType = MenuType(rawValue: indexPath.row) else { return }
+        let secao = indexPath.section
+        var indice = indexPath.row
+        
+        if secao == 1
+        {
+            indice = indice + 3
+        }
+        
+        guard let menuType = MenuType(rawValue: indice) else { return }
         dismiss(animated: true) { [weak self] in
             self?.didTapMenuType?(menuType)
         }

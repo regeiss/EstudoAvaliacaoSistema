@@ -37,8 +37,8 @@
 		E15AAA1F24213D2900B7F4FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E15AAA2224213D2900B7F4FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E15AAA2424213D2900B7F4FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E15AAA2F242162F600B7F4FE /* Usuario+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Usuario+CoreDataClass.swift"; path = "EstudoAvaliacaoSistema/Modelo/Usuario+CoreDataClass.swift"; sourceTree = "<group>"; };
-		E15AAA30242162F600B7F4FE /* Usuario+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Usuario+CoreDataProperties.swift"; path = "EstudoAvaliacaoSistema/Modelo/Usuario+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E15AAA2F242162F600B7F4FE /* Usuario+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuario+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E15AAA30242162F600B7F4FE /* Usuario+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuario+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E15AAA33242165FE00B7F4FE /* Persistencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistencia.swift; sourceTree = "<group>"; };
 		E15AAA3524226C8000B7F4FE /* Rede.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rede.swift; sourceTree = "<group>"; };
 		E15AAA382422947000B7F4FE /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -64,8 +64,6 @@
 		E15AAA0724213D2600B7F4FE = {
 			isa = PBXGroup;
 			children = (
-				E15AAA2F242162F600B7F4FE /* Usuario+CoreDataClass.swift */,
-				E15AAA30242162F600B7F4FE /* Usuario+CoreDataProperties.swift */,
 				E15AAA1224213D2600B7F4FE /* EstudoAvaliacaoSistema */,
 				E15AAA1124213D2600B7F4FE /* Products */,
 			);
@@ -102,6 +100,8 @@
 		E15AAA2A2421453A00B7F4FE /* Modelo */ = {
 			isa = PBXGroup;
 			children = (
+				E15AAA2F242162F600B7F4FE /* Usuario+CoreDataClass.swift */,
+				E15AAA30242162F600B7F4FE /* Usuario+CoreDataProperties.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";

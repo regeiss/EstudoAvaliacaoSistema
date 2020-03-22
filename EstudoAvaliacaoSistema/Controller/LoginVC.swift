@@ -184,6 +184,11 @@ class LoginVC: UIViewController, UITextFieldDelegate, NetworkCheckObserver
                     else {return}
                     navigationController?.pushViewController(viewVC, animated: true)
             
+            case .cadastro:
+                guard let viewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PerfilVC") as? CadastroVC
+                    else {return}
+                    navigationController?.pushViewController(viewVC, animated: true)
+            
             case .logout:
                 let login = Login()
                 login.atualizaStatusLogin(status: false)
