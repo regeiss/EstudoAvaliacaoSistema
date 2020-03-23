@@ -42,16 +42,14 @@ class NetworkCheck
     {
         monitor.pathUpdateHandler = { [unowned self] path in
             for (id, observations) in self.observations {
-                
-                //If any observer is nil, remove it from the list of observers
-                guard let observer = observations.observer else {
+                guard let observer = observations.observer
+                else
+                {
                     self.observations.removeValue(forKey: id)
                     continue
                 }
                 
-                DispatchQueue.main.async(execute: {
-                    observer.statusDidChange(status: path.status)
-                })
+                DispatchQueue.main.async(execute: {observer.statusDidChange(status: path.status)})
             }
         }
         monitor.start(queue: DispatchQueue.global(qos: .background))

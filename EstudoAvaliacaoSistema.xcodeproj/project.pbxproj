@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E10AB318242940730078E372 /* LoginStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AB317242940730078E372 /* LoginStatus.swift */; };
 		E15AAA1424213D2600B7F4FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA1324213D2600B7F4FE /* AppDelegate.swift */; };
 		E15AAA1624213D2600B7F4FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA1524213D2600B7F4FE /* SceneDelegate.swift */; };
 		E15AAA1824213D2600B7F4FE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA1724213D2600B7F4FE /* LoginVC.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E10AB317242940730078E372 /* LoginStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStatus.swift; sourceTree = "<group>"; };
 		E15AAA1024213D2600B7F4FE /* EstudoAvaliacaoSistema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstudoAvaliacaoSistema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15AAA1324213D2600B7F4FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E15AAA1524213D2600B7F4FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				E15AAA33242165FE00B7F4FE /* Persistencia.swift */,
 				E15AAA3524226C8000B7F4FE /* Rede.swift */,
+				E10AB317242940730078E372 /* LoginStatus.swift */,
 			);
 			path = Servicos;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				E15AAA3624226C8000B7F4FE /* Rede.swift in Sources */,
 				E15AAA4524253E7E00B7F4FE /* CadastroVC.swift in Sources */,
 				E15AAA392422947000B7F4FE /* Login.swift in Sources */,
+				E10AB318242940730078E372 /* LoginStatus.swift in Sources */,
 				E15AAA34242165FE00B7F4FE /* Persistencia.swift in Sources */,
 				E15AAA3F2424042300B7F4FE /* SlideInTransition.swift in Sources */,
 				E15AAA4324252D5000B7F4FE /* PerfilVC.swift in Sources */,
