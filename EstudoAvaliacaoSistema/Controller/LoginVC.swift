@@ -48,20 +48,38 @@ class LoginVC: UIViewController, UITextFieldDelegate, NetworkCheckObserver
         networkCheck.removeObserver(observer: self)
     }
     
-    
-    // MARK: Acoes dos objetos da view
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool
+    {
+       return disparaSegue
+    }
+
+    // MARK: - Acoes dos objetos da view
     @IBAction func AcionaMenu(_ sender: UIBarButtonItem)
     {
         guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "MenuTableViewController") as? SideMenuVC
         else
         { return }
         
-        menuViewController.didTapMenuType = { menuType in self.transitionToNew(menuType)}
+        menuViewController.didTapMenuType = {menuType in self.transitionToNew(menuType)}
         menuViewController.modalPresentationStyle = .overCurrentContext
         menuViewController.transitioningDelegate = self
         present(menuViewController, animated: true)
     }
     
+    @IBAction func btnLoginTapped(_ sender: UIButton)
+    {
+        if validaEntrada()
+          {
+              NotificationCenter.default.post(name: .didReceiveData, object: nil)
+              //salvaUsuario()
+              disparaSegue = true
+          }
+          else
+          {
+              disparaSegue = false
+          }
+
+    }
     
     func textFieldDidEndEditing(_ textField: UITextField)
     {

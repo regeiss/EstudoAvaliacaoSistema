@@ -44,6 +44,10 @@ class Login
     func atualizaStatusLogin(status: Bool)
     {
         // Grava status de login
-        var statusLogado: Bool = status
+        let statusLogado: Bool = status
+        if statusLogado
+        {
+            print(statusLogado)
+        }
     }
 }

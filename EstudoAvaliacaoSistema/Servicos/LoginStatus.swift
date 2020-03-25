@@ -4,48 +4,45 @@
 //
 //  Created by Roberto Edgar Geiss on 23/03/20.
 //  Copyright © 2020 Roberto Edgar Geiss. All rights reserved.
-//
+// ===============================================================
+// Classe de estudo talvez nao seja utilizada
+// ===============================================================
 
 import Foundation
 
 class LoginStatus
 {
+    private let notificationCenter: NotificationCenter
     init(notificationCenter: NotificationCenter = .default) {self.notificationCenter = notificationCenter}
     
-    private let notificationCenter: NotificationCenter
-    private var state = Status.deslogado
+    private var estadoLogin = Status.deslogado
     {
-        // We add a property observer on 'state', which lets us
-        // run a function on each value change.
         didSet { stateDidChange() }
     }
 
-    func play(_ usuario: Usuario)
+    func logar(_ usuario: Usuario)
     {
-        state = .logado(usuario)
+        estadoLogin = .logado(usuario)
 //        startPlayback(with: item)
     }
 
-    func pause(_ usuario: Usuario)
+    func bloquear(_ usuario: Usuario)
     {
-        switch state
+        switch estadoLogin
         {
         case .deslogado, .bloqueado(usuario):
-            // Calling pause when we're not in a playing state
-            // could be considered a programming error, but since
-            // it doesn't do any harm, we simply break here.
             break
         case .logado(let usuario):
-            state = .bloqueado(usuario)
+            estadoLogin = .bloqueado(usuario)
 //            pausePlayback()
         case .bloqueado(_):
-            state = .bloqueado(usuario)
+            estadoLogin = .bloqueado(usuario)
         }
     }
 
-    func stop()
+    func deslogar()
     {
-        state = .deslogado
+        estadoLogin = .deslogado
 //        stopPlayback()
     }
 }
@@ -64,20 +61,25 @@ private extension LoginStatus
 {
     func stateDidChange()
     {
-        switch state {
-        case .deslogado:
-            notificationCenter.post(name: .playbackStopped, object: nil)
-        case .logado(let status):
-            notificationCenter.post(name: .playbackStarted, object: status)
-        case .bloqueado(let status):
-            notificationCenter.post(name: .playbackPaused, object: status)
+        switch estadoLogin
+        {
+            case .deslogado:
+                notificationCenter.post(name: .deslogadoUsuario, object: nil)
+            case .logado(let status):
+                notificationCenter.post(name: .logadoUsuario, object: status)
+            case .bloqueado(let status):
+                notificationCenter.post(name: .bloqueadoUsuario, object: status)
         }
     }
 }
 
 extension Notification.Name
 {
-    static var playbackStarted: Notification.Name {return .init(rawValue: "AudioPlayer.playbackStarted")}
-    static var playbackPaused: Notification.Name {return .init(rawValue: "AudioPlayer.playbackPaused")}
-    static var playbackStopped: Notification.Name {return .init(rawValue: "AudioPlayer.playbackStopped")}
+    static var logadoUsuario: Notification.Name {return .init(rawValue: "LoginStatus.logado")}
+    static var bloqueadoUsuario: Notification.Name {return .init(rawValue: "LoginStatus.bloqueado")}
+    static var deslogadoUsuario: Notification.Name {return .init(rawValue: "LoginStatus.deslogado")}
+    
+    static let didReceiveData = Notification.Name("didReceiveData")
+    static let didCompleteTask = Notification.Name("didCompleteTask")
+    static let completedLengthyDownload = Notification.Name("completedLengthyDownload")
 }

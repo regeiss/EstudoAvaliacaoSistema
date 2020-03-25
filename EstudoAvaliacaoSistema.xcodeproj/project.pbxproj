@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E10AB318242940730078E372 /* LoginStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AB317242940730078E372 /* LoginStatus.swift */; };
+		E10AB31B242A966F0078E372 /* Usuario+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AB319242A966F0078E372 /* Usuario+CoreDataClass.swift */; };
+		E10AB31C242A966F0078E372 /* Usuario+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10AB31A242A966F0078E372 /* Usuario+CoreDataProperties.swift */; };
 		E15AAA1424213D2600B7F4FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA1324213D2600B7F4FE /* AppDelegate.swift */; };
 		E15AAA1624213D2600B7F4FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA1524213D2600B7F4FE /* SceneDelegate.swift */; };
 		E15AAA1824213D2600B7F4FE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA1724213D2600B7F4FE /* LoginVC.swift */; };
@@ -15,8 +17,6 @@
 		E15AAA1E24213D2600B7F4FE /* EstudoAvaliacaoSistema.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA1C24213D2600B7F4FE /* EstudoAvaliacaoSistema.xcdatamodeld */; };
 		E15AAA2024213D2900B7F4FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15AAA1F24213D2900B7F4FE /* Assets.xcassets */; };
 		E15AAA2324213D2900B7F4FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15AAA2124213D2900B7F4FE /* LaunchScreen.storyboard */; };
-		E15AAA31242162F600B7F4FE /* Usuario+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA2F242162F600B7F4FE /* Usuario+CoreDataClass.swift */; };
-		E15AAA32242162F600B7F4FE /* Usuario+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA30242162F600B7F4FE /* Usuario+CoreDataProperties.swift */; };
 		E15AAA34242165FE00B7F4FE /* Persistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA33242165FE00B7F4FE /* Persistencia.swift */; };
 		E15AAA3624226C8000B7F4FE /* Rede.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA3524226C8000B7F4FE /* Rede.swift */; };
 		E15AAA392422947000B7F4FE /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AAA382422947000B7F4FE /* Login.swift */; };
@@ -30,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		E10AB317242940730078E372 /* LoginStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStatus.swift; sourceTree = "<group>"; };
+		E10AB319242A966F0078E372 /* Usuario+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuario+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E10AB31A242A966F0078E372 /* Usuario+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuario+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		E15AAA1024213D2600B7F4FE /* EstudoAvaliacaoSistema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstudoAvaliacaoSistema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15AAA1324213D2600B7F4FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E15AAA1524213D2600B7F4FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,8 +41,6 @@
 		E15AAA1F24213D2900B7F4FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E15AAA2224213D2900B7F4FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E15AAA2424213D2900B7F4FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E15AAA2F242162F600B7F4FE /* Usuario+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuario+CoreDataClass.swift"; sourceTree = "<group>"; };
-		E15AAA30242162F600B7F4FE /* Usuario+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuario+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E15AAA33242165FE00B7F4FE /* Persistencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistencia.swift; sourceTree = "<group>"; };
 		E15AAA3524226C8000B7F4FE /* Rede.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rede.swift; sourceTree = "<group>"; };
 		E15AAA382422947000B7F4FE /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -102,8 +102,8 @@
 		E15AAA2A2421453A00B7F4FE /* Modelo */ = {
 			isa = PBXGroup;
 			children = (
-				E15AAA2F242162F600B7F4FE /* Usuario+CoreDataClass.swift */,
-				E15AAA30242162F600B7F4FE /* Usuario+CoreDataProperties.swift */,
+				E10AB319242A966F0078E372 /* Usuario+CoreDataClass.swift */,
+				E10AB31A242A966F0078E372 /* Usuario+CoreDataProperties.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";
@@ -226,13 +226,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E15AAA1824213D2600B7F4FE /* LoginVC.swift in Sources */,
-				E15AAA31242162F600B7F4FE /* Usuario+CoreDataClass.swift in Sources */,
-				E15AAA32242162F600B7F4FE /* Usuario+CoreDataProperties.swift in Sources */,
 				E15AAA3B2422978A00B7F4FE /* Utilitarios.swift in Sources */,
 				E15AAA1424213D2600B7F4FE /* AppDelegate.swift in Sources */,
 				E15AAA1E24213D2600B7F4FE /* EstudoAvaliacaoSistema.xcdatamodeld in Sources */,
 				E15AAA3624226C8000B7F4FE /* Rede.swift in Sources */,
 				E15AAA4524253E7E00B7F4FE /* CadastroVC.swift in Sources */,
+				E10AB31C242A966F0078E372 /* Usuario+CoreDataProperties.swift in Sources */,
 				E15AAA392422947000B7F4FE /* Login.swift in Sources */,
 				E10AB318242940730078E372 /* LoginStatus.swift in Sources */,
 				E15AAA34242165FE00B7F4FE /* Persistencia.swift in Sources */,
@@ -240,6 +239,7 @@
 				E15AAA4324252D5000B7F4FE /* PerfilVC.swift in Sources */,
 				E15AAA1624213D2600B7F4FE /* SceneDelegate.swift in Sources */,
 				E15AAA3D2423F4F600B7F4FE /* SideMenuVC.swift in Sources */,
+				E10AB31B242A966F0078E372 /* Usuario+CoreDataClass.swift in Sources */,
 				E15AAA4124252D2700B7F4FE /* AjudaVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

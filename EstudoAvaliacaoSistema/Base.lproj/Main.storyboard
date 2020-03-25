@@ -27,6 +27,10 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnLoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="grZ-xY-lhV"/>
+                                    <segue destination="7Tv-PD-A3X" kind="show" identifier="loginSegue" id="bN1-Md-9yO"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Informe seu usuário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbB-I6-DId">
                                 <rect key="frame" x="60.5" y="654" width="293" height="34"/>
@@ -115,6 +119,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1694" y="132"/>
+        </scene>
+        <!--Fornecedor-->
+        <scene sceneID="FBV-oT-8gw">
+            <objects>
+                <tableViewController id="7Tv-PD-A3X" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OwP-ij-acz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="D4E-eo-baB">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D4E-eo-baB" id="hn0-kG-5bV">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7Tv-PD-A3X" id="d51-eI-JPi"/>
+                            <outlet property="delegate" destination="7Tv-PD-A3X" id="Xog-Gi-cwz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Fornecedor" largeTitleDisplayMode="always" id="bJ8-tW-f23">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="Lat-AZ-yfy"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aul-po-fRz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-855" y="132"/>
         </scene>
         <!--PerfilVC-->
         <scene sceneID="prx-BH-FCO">
@@ -451,16 +486,27 @@
                                     <constraint firstAttribute="width" constant="240" id="SI8-ab-cdJ"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7H-jG-cMi">
+                                <rect key="frame" x="169" y="209" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rwB-vp-ikU" firstAttribute="centerX" secondItem="VwG-HK-qzM" secondAttribute="centerX" id="CFD-17-gjN"/>
                             <constraint firstItem="5qN-IR-WEO" firstAttribute="centerY" secondItem="VwG-HK-qzM" secondAttribute="centerY" id="MVh-cj-uQn"/>
+                            <constraint firstItem="V7H-jG-cMi" firstAttribute="top" secondItem="F7A-lp-dxu" secondAttribute="top" constant="165" id="YAz-pK-mcp"/>
                             <constraint firstItem="rwB-vp-ikU" firstAttribute="top" secondItem="5qN-IR-WEO" secondAttribute="bottom" constant="77.5" id="akB-SL-WK5"/>
+                            <constraint firstItem="V7H-jG-cMi" firstAttribute="centerX" secondItem="VwG-HK-qzM" secondAttribute="centerX" id="hZf-FO-JYu"/>
                             <constraint firstItem="5qN-IR-WEO" firstAttribute="centerX" secondItem="VwG-HK-qzM" secondAttribute="centerX" id="vwZ-7u-F8t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="F7A-lp-dxu"/>
                     </view>
+                    <connections>
+                        <outlet property="lblLogado" destination="V7H-jG-cMi" id="zZB-pa-vC5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRh-H6-gMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
